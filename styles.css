@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior:smooth;
+    font-family: 'Pacifico', cursive,'Poppins', sans-serif; 
+    
+
+}
+:root{
+    --bg-color: #300839;
+    --second--bg-color: #780b90;
+    --text-color: #9a6a90;
+    --main-color: #f4e1d2;
+    
+}
+
+html{
+    font-size: 65%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    top: 0;
+    left: 0;
+    width: 100;
+    padding: 2rem 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100px;
+    
+}
+
+.heading{
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.navbar a{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 2.5rem;
+    transition: 1s;
+}
+
+.navbar a:hover,.navbar a.initialpage{
+    color: var(--main-color);
+}
+
+#menu-icon{
+    font-size: 4rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    min-height: 25vh;
+    padding: 10rem 9% 2em;
+}
+.home{
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+}
+.home-content{
+    padding-left: 6%;
+    max-width: 80rem;
+}
+.home-content h1{
+    font-size: 5.8rem;
+    font-weight: 650;
+    line-height: 1.2;
+}
+.home-content .traits-animate{
+    position: relative;
+    width: 50rem;
+}
+.home-content .traits-animate h3{
+    font-size: 3.2rem;
+    font-weight: 650;
+    color: transparent;
+    -webkit-text-stroke: .5px var(--main-color);
+}
+.home-content p{
+    font-size: 1.5rem;
+    margin: 2rem 0 4rem;
+}
+.resume-div{
+    position: relative;
+    justify-content: center;
+    display: inline-flex;
+    width: 10rem;
+    height: 40px;
+    align-items: center;
+    background: transparent;
+    border: #780b90;
+    border-color: black;
+    border-radius: 50px;
+    border-width: 50;
+}
