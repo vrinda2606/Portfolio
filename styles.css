@@ -90,7 +90,7 @@ section{
     width: 40rem;
 }
 .home-content .traits-animate h3{
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 650;
     color: transparent;
     -webkit-text-stroke: .5px var(--main-color);
@@ -99,7 +99,7 @@ section{
     font-size: 1.5rem;
     margin: 2rem 0 4rem;
 }
-.resume-div{
+.button-div{
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -107,7 +107,7 @@ section{
     height: 5rem;
 }
 
-.resume-div .resume{
+.button-div .button{
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -123,7 +123,7 @@ section{
     overflow: hidden;
 }
 
-.resume-div .resume::before{
+.button-div .button::before{
     content: '';
     position: absolute;
     top: 0;
@@ -134,11 +134,13 @@ section{
     z-index: -1;
     transition: .5s;
 }
-.resume-div .resume:hover::before{
+.button-div .button:hover::before{
     width: 100%;
 }
 
-.resume-div .resume:hover{
+.button-div .button:hover{
        background: var(--second--bg-color);
        color: var(--main-color);
 }
+
+
