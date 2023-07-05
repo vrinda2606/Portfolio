@@ -68,7 +68,7 @@ body{
 }
 
 section{
-    min-height: 25vh;
+    min-height: 100vh;
     padding: 10rem 9% 2em;
 }
 .home{
@@ -78,19 +78,19 @@ section{
 }
 .home-content{
     padding-left: 6%;
-    max-width: 80rem;
+    max-width: 60rem;
 }
 .home-content h1{
-    font-size: 5.8rem;
+    font-size: 5.5rem;
     font-weight: 650;
     line-height: 1.2;
 }
 .home-content .traits-animate{
     position: relative;
-    width: 50rem;
+    width: 40rem;
 }
 .home-content .traits-animate h3{
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 650;
     color: transparent;
     -webkit-text-stroke: .5px var(--main-color);
@@ -101,14 +101,44 @@ section{
 }
 .resume-div{
     position: relative;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+
+.resume-div .resume{
+    position: relative;
     display: inline-flex;
-    width: 10rem;
-    height: 40px;
+    justify-content: center;
     align-items: center;
-    background: transparent;
-    border: #780b90;
-    border-color: black;
-    border-radius: 50px;
-    border-width: 50;
+    width: 15rem;
+    border-radius: 500px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: var(--main-color);
+    letter-spacing: .1rem;
+    color: var(--second--bg-color);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.resume-div .resume::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--text-color);
+    z-index: -1;
+    transition: .5s;
+}
+.resume-div .resume:hover::before{
+    width: 100%;
+}
+
+.resume-div .resume:hover{
+       background: var(--second--bg-color);
+       color: var(--main-color);
 }
