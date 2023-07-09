@@ -45,7 +45,7 @@ body{
 }
 
 .header.sticky{
-    background: yellowgreen;
+    background: var(--second--bg-color);
 }
 
 .heading-fixed{
@@ -63,7 +63,7 @@ body{
     transition: 1s;
 }
 
-.navbar a:hover,.navbar a.initialpage{
+.navbar a:hover,.navbar a.active{
     color: var(--main-color);
 }
 
