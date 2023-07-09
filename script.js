@@ -27,8 +27,13 @@ window.onscroll = () => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*='+id+']').classList.add('active');
             });
+            //active sessions show variations on screen
+            x.classList.add('show-variation');
         }
-
+         // on scrolling use variation repeatition
+         else{
+            x.classList.remove('show-variation');
+         }
     });
 
 
