@@ -40,12 +40,12 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100px;
+    z-index: 1000;
     transition: .3s;
 }
 
 .header.sticky{
-    background: var(--second--bg-color);
+    background: var(--bg-color);
 }
 
 .heading-fixed{
@@ -210,6 +210,7 @@ span{
     border-bottom: .2rem solid var(--second--bg-color);
     border-left: .2rem solid var(--main-color);
     border-right: .2rem solid var(--main-color);
+    animation: aboutSpinner 8s linear infinite;
 }
 
 .about-content{
@@ -467,4 +468,120 @@ span{
     width: 40px;
     height: 40px;
     background: transparent;
+}
+
+/*    */
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 1400px){
+    .header{
+        padding: 2rem 2%;
+    }
+
+    section{
+        padding: 10rem 4% 2rem;
+    }
+
+    .home{
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 768px){
+    .header{
+        background: var(--bg-color);
+    }
+    .heading-fixed{
+        color: var(--main-color);
+    }
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--main-color);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+        transition: .30s ease;
+        transition-delay: .30s;
+        z-index: 1;
+    }
+
+    .navbar.active{
+        transition-delay: 0s;
+        left: 0;
+    }
+
+    .navbar .active-nav{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.5);
+        z-index: -1;
+        transition: .2s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active .active-nav{
+        transition-delay: .30s;
+        left: 0;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transition: .25s ease;
+        transition-delay: 0s;
+        transform: translateX(-20rem);
+    }
+
+    .navbar.active a{
+        transform: translateX(0);
+        transition-delay: .25s;
+    }
+}
+@media (max-width: 660px){
+    html{
+        font-size: 50%;
+    }
+    .home-content h1{
+        display: flex;
+        flex-direction: column;
+    }
+    .home-content h1{
+        font-size: 5.2rem;
+    }
+    .contact form .input-box .input-field{
+        width: 100%;
+    }
+}
+@media (max-width: 580px){
+    .home{
+        justify-content: center;
+    }
+    .education{
+        padding: 10rem 4% 5rem 5%;
+    }
+    .home-content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@keyframes aboutSpinner{
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
