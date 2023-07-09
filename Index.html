@@ -1,237 +1,587 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Portfolio Website</title>
-            
-        <link rel="stylesheet" href="styles.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  <!--boxicons-->
-    </head>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
-    <body>
-        <!--Header-->
-        <header class="header">
-            <a href="#" class="heading-fixed">Vrinda</a>
+*{
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior:smooth;
+    font-family: 'Pacifico', cursive,'Poppins', sans-serif; 
+    
 
-            <div class="bx bx-menu" id="menu-icon"> </div>
-            <nav class="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
+}
+:root{
+    --bg-color: #300839;
+    --second--bg-color: #780b90;
+    --text-color: #9a6a90;
+    --main-color: #f4e1d2;
+    
+}
 
+html{
+    font-size: 65%;
+    overflow-x: hidden;
+}
 
-        <!--Home-->
-        <section class="home" id="home">
-          <div class="home-content">
-            <h1>Hi! I am <span>VRINDA SHARMA</span>,a </h1>
-            <div class="traits-animate">
-                <h3>Frontend Developer | Competitive Programmer</h3>
-            </div>
-            <p>An exuberant and highly motivated engineering student, brimming with enthusiasm to tackle any challenge that comes my way. 
-               </p>
-            <div class="button-div">
-               <a class="button" href="VRINDA's Resume.pdf" download="Vrinda's resume">Download Resume</a>
-            </div>
-          </div>      
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
 
-          <div class="home-imghover"></div>
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: .3s;
+}
 
-        </section>
+.header.sticky{
+    background: var(--bg-color);
+}
 
+.heading-fixed{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-right: 60rem;
+}
 
-        <!--About-->
-        <section class="about" id="about">
-          <h2 class="heading">About <span>Me</span></h2> 
-           <div class="about-image">
-               <img src="Image.jpeg" alt="image">
-               <span class="circle-spin"></span>
-           </div>
-           <div class="about-content">
-               <h3>Frontend Developer | Competitive Programmer</h3>
-               <p>I am a 20 year old B.Tech 4th year student who enjoys problem solving and have a perspective to look forward and ready to take up challenges. I eagerly seek opportunities to apply my skills towards the future development processes, having a zeal to learn and grow. </p>
-               <div class="button-div btns">
-                  <a href="#education" class="button">Read More</a>
-               </div>
-            </div>
-        </section>
+.navbar a{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: 1s;
+}
 
+.navbar a:hover,.navbar a.active{
+    color: var(--main-color);
+}
 
-        <!--Education-->
-         <section class="education" id="education">
-            <h2 class="heading">My <span>Academic Details</span></h2>
-            
-            <div class="education-row">
-              
-                <div class="education-column">
-                    <h3 class="title">Education</h3>
+#menu-icon{
+    font-size: 4rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
 
-                    <div class="education-box">
-                        
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar-event' >2020-2024</i></div>
-                                <h3>Graduation</h3>
-                                <p>Ajay Kumar Garg Engineering College, Ghaziabad</p>
-                                <p>-Bachelor of Technology (Information Technology)</p>
-                            </div>
-                        </div>
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2em;
+}
 
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar-event' >2018-2020</i></div>
-                                <h3>Indermediate</h3>
-                                <p>Delhi Public School, Bulandshahr</p>
-                            </div>
-                        </div>
+.home{
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+}
 
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar-event' >2006-2018</i></div>
-                                <h3>High School</h3>
-                                <p>Nirmala Convent School, Bulandshahr</p>
-                            </div>
-                        </div>
-                    
-                    </div>
-                </div>
-            </div>
+.home-content{
+    padding-left: 10%;
+    max-width: 60rem;
+}
 
-         </section>
+.home-content h1{
+    font-size: 5.5rem;
+    font-weight: 650;
+    line-height: 1.2;
+}
 
-        <!--skills-->
-        <section class="skills" id="skills">
-            <h2 class="heading">My <span>Skills</span></h2>
+.home-content h1 span{
+    color: var(--text-color);
+}
 
-            <div class="skills-row">
-              
-                
-                <div class="skills-column">
-                    <h3 class="title">Programming Skills</h3>
+.home-content .traits-animate{
+    position: relative;
+    width: 40rem;
+}
 
-                    <div class="skills-box">
-                        <div class="skills-content">
-                            
-                            <div class="progress">
-                                 <h3><span><i class='bx bxl-c-plus-plus'></i> C/C++ Programming </span>80%</h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span><i class='bx bxl-html5' ></i> HTML</span>90%</h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span><i class='bx bxl-css3' ></i> CSS(Cascading Style Sheets)</span>80%</h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span><i class='bx bxl-javascript' ></i> JS(JavaScript)</span>80%</h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span><i class='bx bxl-react' ></i> React</span>70%</h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span></span></h3>
-                            </div>
-            
-                        </div>
-                    </div>
-                </div>
+.home-content .traits-animate h3{
+    font-size: 3.2rem;
+    font-weight: 650;
+    color: transparent;
+    -webkit-text-stroke: .5px var(--main-color);
+}
 
+.home-content p{
+    font-size: 1.5rem;
+    margin: 2rem 0 4rem;
+}
+.button-div{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
 
-                <div class="skills-column">
-                    <h3 class="title">Professional Skills</h3>
+.button-div .button{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 500px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: var(--main-color);
+    letter-spacing: .1rem;
+    color: var(--second--bg-color);
+    z-index: 1;
+    overflow: hidden;
+}
 
-                    <div class="skills-box">
-                        <div class="skills-content">
-                            
-                            <div class="progress">
-                                 <h3><span>Fast learner</span></h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span>Teamwork</span></h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span>Leadership</span></h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span>Problem Solving</span></h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span>Team Management</span></h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span>Communication Skills</span></h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span>Multitasking</span></h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span>Communication Skills</span></h3>
-                            </div>
-                            <div class="progress">
-                                <h3><span>Time Management</span></h3>
-                            </div>
+.button-div .button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--text-color);
+    z-index: -1;
+    transition: .5s;
+}
+.button-div .button:hover::before{
+    width: 100%;
+}
 
-                        </div>
-                    </div>
-                </div>
+.button-div .button:hover{
+       background: var(--second--bg-color);
+       color: var(--main-color);
+}
 
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--second--bg-color);
+    padding-bottom: 6rem;
+}
 
-            </div>
-        </section>
+.heading{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
 
+span{
+   color: var(--main-color);
+}
 
-        
-        <!--Contact-->
-        <section class="contact" id="contact">
-             
-               <h2 class="heading">Contact <span>Me.!</span></h2>
+.about-image{
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-               <form action="#">
-                
-                 <div class="input-box">
-                    <div class="input-field">
-                        <input type="text" placeholder="First Name" required>
-                        <span class="focus"></span>
-                    </div>
-                    <div class="input-field">
-                        <input type="text" placeholder="Last Name" required>
-                        <span class="focus"></span>
-                    </div>
-                 </div>
+.about-image img{
+    width: 90%;
+    border-radius: 50%;
+    border: 0.2rem solid var(--main-color);
+    
+}
 
-                 <div class="input-box">
-                    <div class="input-field">
-                        <input type="email" placeholder="Email Address" required>
-                        <span class="focus"></span>
-                    </div>
-                    <div class="input-field">
-                        <input type="number" placeholder="Mobile Number" required>
-                        <span class="focus"></span>
-                    </div>
-                 </div>
+.about-image .circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--second--bg-color);
+    border-bottom: .2rem solid var(--second--bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+    animation: aboutSpinner 8s linear infinite;
+}
 
-                 <div class="textarea-field">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Enter your message here." required></textarea>
-                    <span class="focus"></span>
-                 </div>
+.about-content{
+    text-align: center;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.button-div.btns{
+    display: inline-block;
+    width: 15rem;
+}
+.button-div.btns a::before{
+    background: var(--text-color);
+}
 
-                 <div class="button-div btns">
-                    <button type="submit" class="button">Submit</button>
-                 </div>
+.education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
 
-                 <div class="icons">
-                    <a href="https://www.linkedin.com/in/vrinda-sharma2606/" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
-                    <a href="https://github.com/vrinda2606" target="_blank"><i class='bx bxl-github' ></i></a>
-                    <a href=""><i class='bx bxl-instagram' ></i></a>
-                    <a href=""><i class='bx bxl-facebook-square' ></i></a>
-                    <a href="mailto:vrinda26sharma@gmailcom"><i class='bx bxl-gmail' ></i></a>
-                </div>
-               </form>
-        </section>
+.education .education-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
 
+.education-row .education-column{
+    flex: 1 1 40rem;
+}
 
+.education-column .title{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
 
-    <script src="script.js"></script>
-    </body>
-</html>
+.education-column .education-box{
+    border-left: .2rem solid var(--main-color);
+}
+
+.education-box .education-content{
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-box .education-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.education-content .content{
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius:  .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.education-content .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+    background: var(--second--bg-color);
+}
+
+.education-content .content:hover:before{
+    width: 100%;
+}
+
+.education-content .content .year{
+    font-size: 1.8rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.education-content .content .year i {
+    padding-right: 50rem;
+}
+
+.education-content .content h3{
+    font-size: 2rem;
+}
+
+.education-content .content p{
+    font-size: 1.6rem;
+    padding-top: .5rem;
+}
+
+.skills{
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: var(--second--bg-color);
+}
+
+.skills .skills-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.skills-row .skills-column{
+    flex: 1 1 40rem;
+}
+
+.skills-column .title{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.skills-box .skills-content{
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.skills-box .skills-content::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.skills-box .skills-content:hover::before{
+    width: 100%;    
+}
+
+.skills-content .progress{
+    padding: 1rem 0;
+}
+
+.skills-content .progress h3{
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact{
+    min-height: auto;
+    padding-bottom: 2rem;
+}
+
+.contact .heading{
+   margin-bottom: 0;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field{
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder{
+    color: var(--text-color);
+}
+.contact form .focus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second--bg-color);
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea:valid~.focus{
+    width: 100%;
+}
+
+.contact form .textarea-field{
+    position: relative;
+    margin: .8rem 0 3rem;
+    display: flex;
+}
+
+.contact form .textarea-field textarea{
+    resize: none;
+}
+
+.contact form .button-div.btns .button{
+    cursor: pointer;
+}
+.contact .icons{
+    bottom: 0rem;
+    width: 200px;
+    display: flex;
+    margin: auto;
+    font-size: 30px;
+    justify-content: space-between;
+}
+
+.icons a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+}
+
+/*    */
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 1400px){
+    .header{
+        padding: 2rem 2%;
+    }
+
+    section{
+        padding: 10rem 4% 2rem;
+    }
+
+    .home{
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 768px){
+    .header{
+        background: var(--bg-color);
+    }
+    .heading-fixed{
+        color: var(--main-color);
+    }
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--main-color);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+        transition: .30s ease;
+        transition-delay: .30s;
+        z-index: 1;
+    }
+
+    .navbar.active{
+        transition-delay: 0s;
+        left: 0;
+    }
+
+    .navbar .active-nav{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.5);
+        z-index: -1;
+        transition: .2s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active .active-nav{
+        transition-delay: .30s;
+        left: 0;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transition: .25s ease;
+        transition-delay: 0s;
+        transform: translateX(-20rem);
+    }
+
+    .navbar.active a{
+        transform: translateX(0);
+        transition-delay: .25s;
+    }
+}
+@media (max-width: 660px){
+    html{
+        font-size: 50%;
+    }
+    .home-content h1{
+        display: flex;
+        flex-direction: column;
+    }
+    .home-content h1{
+        font-size: 5.2rem;
+    }
+    .contact form .input-box .input-field{
+        width: 100%;
+    }
+}
+@media (max-width: 580px){
+    .home{
+        justify-content: center;
+    }
+    .education{
+        padding: 10rem 4% 5rem 5%;
+    }
+    .home-content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@keyframes aboutSpinner{
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
