@@ -34,14 +34,18 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100;
+    width: 100%;
     padding: 2rem 8%;
     background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100px;
-    
+    transition: .3s;
+}
+
+.header.sticky{
+    background: yellowgreen;
 }
 
 .heading-fixed{
@@ -74,30 +78,40 @@ section{
     min-height: 100vh;
     padding: 10rem 9% 2em;
 }
+
 .home{
     display: flex;
     align-items: center;
     padding: 0 9%;
 }
+
 .home-content{
     padding-left: 10%;
     max-width: 60rem;
 }
+
 .home-content h1{
     font-size: 5.5rem;
     font-weight: 650;
     line-height: 1.2;
 }
+
+.home-content h1 span{
+    color: var(--text-color);
+}
+
 .home-content .traits-animate{
     position: relative;
     width: 40rem;
 }
+
 .home-content .traits-animate h3{
     font-size: 3.2rem;
     font-weight: 650;
     color: transparent;
     -webkit-text-stroke: .5px var(--main-color);
 }
+
 .home-content p{
     font-size: 1.5rem;
     margin: 2rem 0 4rem;
@@ -365,6 +379,10 @@ span{
     padding-bottom: 2rem;
 }
 
+.contact .heading{
+   margin-bottom: 0;
+}
+
 .contact form{
     max-width: 70rem;
     margin: 0 auto;
@@ -434,7 +452,7 @@ span{
 }
 .contact .icons{
     bottom: 0rem;
-    width: 17px;
+    width: 200px;
     display: flex;
     margin: auto;
     font-size: 30px;
