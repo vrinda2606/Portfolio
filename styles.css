@@ -525,6 +525,7 @@ span{
     width: 40px;
     height: 40px;
     background: transparent;
+    color: var(--main-color);
 }
 
 
